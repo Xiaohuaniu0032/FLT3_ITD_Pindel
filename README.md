@@ -45,16 +45,16 @@ detect FLT3-internal tandem duplication using Pindel
 
 ### Note
 
-> * short tandem dup will be stored in _SI file
+* short tandem dup will be stored in _SI file
 
-> * long tandem dup will be stored in _TD file
+* long tandem dup will be stored in _TD file
 
 
-`test.ins.vcf`: short tandem dup vcf file
+`*.ins.vcf`: short tandem dup vcf file
 
-`test.td.vcf`: long tandem dup vcf file
+`*.td.vcf`: long tandem dup vcf file
 
-`test.td.final.vcf`: final tandem dup vcf file
+`*.td.final.vcf`: final tandem dup vcf file
 
 
 ## filter process
