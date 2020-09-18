@@ -50,7 +50,7 @@ while (<INS>){
                 if ($item =~ /HOMSEQ/){
                     my $hom_seq = (split /=/, $item)[1];
                     my $hom_len = length($hom_seq);
-                    if ($hom_seq >= $alt_len){
+                    if ($hom_len >= $alt_len){
                         print O "$_\n";
                     }
                 }
