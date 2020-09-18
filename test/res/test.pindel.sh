@@ -1,0 +1,4 @@
+/home/fulongfei/miniconda3/bin/pindel -f /data1/database/b37/human_g1k_v37.fasta -i /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/pinde.cfg -o /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/test -c chr13:28608000-28609000
+/home/fulongfei/miniconda3/bin/pindel2vcf -p /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/test_SI -r /data1/database/b37/human_g1k_v37.fasta -R human_g1k_v37 -d 2009 -v /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/test.ins.vcf
+/home/fulongfei/miniconda3/bin/pindel2vcf -p /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/test_TD -r /data1/database/b37/human_g1k_v37.fasta -R human_g1k_v37 -d 2009 -v /home/fulongfei/workdir/git_repo/FLT3_ITD_Pindel/test/res/test.td.vcf
+perl /data1/workdir/fulongfei/git_repo/FLT3_ITD_Pindel/PindelResFilter.pl 
