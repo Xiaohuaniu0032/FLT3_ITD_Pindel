@@ -52,7 +52,7 @@ open FA, "$fa" or die;
 my $first_line = <FA>;
 close FA;
 
-if ($first_line =~ /^\d/){
+if ($first_line =~ /^\>\d/){
     $chr_naming = "no_chr_prefix"
 }else{
     $chr_naming = "with_chr_prefix";
