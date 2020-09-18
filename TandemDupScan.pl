@@ -33,10 +33,6 @@ if (not defined $fa){
     $fa = "/data1/database/b37/human_g1k_v37.fasta";
 }
 
-if (not defined $fa_version){
-    $fa_version = "hg19";
-}
-
 if (not defined $pindel_bin){
     $pindel_bin = "/home/fulongfei/miniconda3/bin/pindel";
 }
@@ -61,9 +57,9 @@ if ($first_line =~ /^\>\d/){
 # FLT3 exon13-15 region
 my $region;
 if ($chr_naming eq "no_chr_prefix"){
-    $region = "13:28608000-28609000";
+    $region = "13:28600000-28610000";
 }else{
-    $region = "chr13:28608000-28609000";
+    $region = "chr13:28600000-28610000";
 }
 
 
@@ -87,7 +83,7 @@ print O "$pindel2vcf -p $td -r $fa -R $fa_name -d 2009 -v $outdir/$name\.td.vcf\
 
 
 # filter result
-print O "perl $Bin/PindelResFilter.pl \n";
+print O "perl $Bin/PindelResFilter.pl -si $outdir/$name\.ins.vcf -td $outdir/$name\.td.vcf -n $name -od $outdir\n";
 close O;
 
 
