@@ -20,6 +20,8 @@ GetOptions(
 # 1. HOMLEN > 0;
 # 2. alt seq is included by HOMSEQ (not used)
 # 3. hom seq len >= alt seq len
+# 4. alt num >= 2
+# 5. SVLEN >= 2
 
 # for _TD file:
 # 1. no filter
@@ -50,6 +52,13 @@ while (<INS>){
                 if ($item =~ /HOMSEQ/){
                     my $hom_seq = (split /=/, $item)[1];
                     my $hom_len = length($hom_seq);
+                    my $alt_num = (split /\,/, $arr[-1])[1];
+                    next if ($alt_num <= 1);
+                    
+                    if (/SVLEN=1/){
+                        next;
+                    }
+                    
                     if ($hom_len >= $alt_len){
                         print O "$_\n";
                     }
