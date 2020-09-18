@@ -61,7 +61,7 @@ detect FLT3-internal tandem duplication using Pindel
 
 ### for _SI file
 1. HOMLEN > 0
-2. hom seq len >= alt seq len
+2. POS column need to be included by the positions of alt seq
 3. alt num >= 2
 4. SVLEN >= 2
 
