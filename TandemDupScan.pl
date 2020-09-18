@@ -5,14 +5,13 @@ use FindBin qw/$Bin/;
 use Getopt::Long;
 use Cwd 'abs_path';
 
-my ($bam,$name,$frag_len,$fa,$fa_version,$pindel_bin,$outdir);
+my ($bam,$name,$frag_len,$fa,$pindel_bin,$outdir);
 
 GetOptions(
     "bam:s" => \$bam,                 # Need
     "n:s" => \$name,                  # Optional (default:<name>.bam)
     "flen:i" => \$frag_len,           # Optional (default: 500)
     "fa:s" => \$fa,                   # Optional (default: /data1/database/b37/human_g1k_v37.fasta)
-    "fa_v:s" => \$fa_version,         # Optional (default: hg19)
     "pindel:s" => \$pindel_bin,       # Optional (default: /home/fulongfei/miniconda3/bin/pindel)
     "od:s" => \$outdir,               # Need
     ) or die "unknown args\n";
