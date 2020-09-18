@@ -1,0 +1,621 @@
+Initializing parameters...
+Pindel version 0.2.5b9, 20160729.
+Loading reference genome ...
+Loading reference genome done.
+Initializing parameters done.
+SearchRegion::SearchRegion
+Processing region: 13	28600000	28610000
+Chromosome Size: 115169878
+NumBoxes: 60011	BoxSize: 3845
+
+Looking at chromosome 13 bases 28600000 to 28610000 of the bed region: chromosome 13:28600000-28610000 
+No discordant RP reads in Bamfile /data1/workdir/fulongfei/git_repo/FLT3_ITD_Pindel/test/test.sort.TD.170.bam
+Discovery RP: 0
+sorting RP complete.
+Reads_RP.size(): 0
+Modify RP complete.
+adding BD from RP.
+modify and summarize interchr RP.
+adding BD from interChr RP.
+summarize BP as BD complete. Now start sorting BD...
+sorting BD... done.
+external BD events: 0 Added BreakDancer-like events: 0
+
+Insertsize in config: 500
+The number of one end mapped read: 673
+Number of problematic reads in current window:            	988, + 563 - 425
+Number of split-reads where the close end could be mapped:	673, + 365 - 308
+Percentage of problematic reads with close end mapped:    	+ 64.83% - 72.47%
+BAM file index	0
+Bam file name	/data1/workdir/fulongfei/git_repo/FLT3_ITD_Pindel/test/test.sort.TD.170.bam
+Number of split-reads so far	673
+
+The number of one end mapped read: 673
+There are 9653 reads supporting the reference allele.
+There are 1 samples.
+SampleName2Index done
+declaring g_RefCoverageRegion for 1 samples and 30001 positions.
+There are 673 split-reads for this chromosome region.
+
+There are 0 split-reads mapped by aligner.
+search far ends
+Far end searching completed for this window.
+update FarFragName
+update FarFragName done
+Searching and reporting variations
+Reads already used: 0
+Far ends already mapped 613
+Checksum of far ends: 598360564
+Searching some type of variant, replace this with the correct name in child class ... 
+Total: 0	+0	-0
+Sorting and outputing deletions ...
+Deletions: 0
+
+Searching deletion-insertions ... 
+Total: 0	+0	-0
+Sorting and outputing deletions with non-template sequences ...
+Added: Sorting and outputing deletions with non-template sequences ...
+deletions with non-template sequences: 0
+
+Searching tandem duplication events ... 
+Total: 515	+263	-252
+Sorting and outputing tandem duplications ...
+Tandem duplications: 1
+
+Searching tandem duplication events with non-template sequence ... 
+Total: 0	+0	-0
+Sorting and outputing tandem duplications with non-template sequence ...
+Tandem duplications with non-template sequence (TD_NT): 0
+
+Searching inversions ... 
+Total: 0	+0	-0
+Sorting and outputing Inversions ...
+Inversions (INV): 0
+
+Searching inversions with non-template sequence ... 
+Total: 32	+28	-4
+Sorting and outputing Inversions with non-template sequence ...
+Inversions with non-template sequence (INV_NT): 1
+
+Reads already used: 547
+Far ends already mapped 613
+Checksum of far ends: 598360564
+Searching some type of variant, replace this with the correct name in child class ... 
+Total: 0	+0	-0
+Sorting and outputing short insertions ...
+Short insertions: 0
+
+Total: 673;	Close_end_found 673;	Far_end_found 613;	Used	547.
+
+For LI and BP: 60
+
+There are 0 split-reads saved for the next cycle.
+
+InterChromosome_SR.size(): 0
+PreviousChrName: 
+Initializing pindel 109 seconds.
+Loading chromosomes 0 seconds.
+Reading in reads + matching close ends 0 seconds.
+Searching far ends 0 seconds.
+Searching and reporting variations 0 seconds.
+Samples:
+Chromosomes in which SVs have been found:
+Scanning chromosome: 1
+Scanning chromosome: 2
+Scanning chromosome: 3
+Scanning chromosome: 4
+Scanning chromosome: 5
+Scanning chromosome: 6
+Scanning chromosome: 7
+Scanning chromosome: 8
+Scanning chromosome: 9
+Scanning chromosome: 10
+Scanning chromosome: 11
+Scanning chromosome: 12
+Scanning chromosome: 13
+Scanning chromosome: 14
+Scanning chromosome: 15
+Scanning chromosome: 16
+Scanning chromosome: 17
+Scanning chromosome: 18
+Scanning chromosome: 19
+Scanning chromosome: 20
+Scanning chromosome: 21
+Scanning chromosome: 22
+Scanning chromosome: X
+Scanning chromosome: Y
+Scanning chromosome: MT
+Scanning chromosome: GL000207.1
+Scanning chromosome: GL000226.1
+Scanning chromosome: GL000229.1
+Scanning chromosome: GL000231.1
+Scanning chromosome: GL000210.1
+Scanning chromosome: GL000239.1
+Scanning chromosome: GL000235.1
+Scanning chromosome: GL000201.1
+Scanning chromosome: GL000247.1
+Scanning chromosome: GL000245.1
+Scanning chromosome: GL000197.1
+Scanning chromosome: GL000203.1
+Scanning chromosome: GL000246.1
+Scanning chromosome: GL000249.1
+Scanning chromosome: GL000196.1
+Scanning chromosome: GL000248.1
+Scanning chromosome: GL000244.1
+Scanning chromosome: GL000238.1
+Scanning chromosome: GL000202.1
+Scanning chromosome: GL000234.1
+Scanning chromosome: GL000232.1
+Scanning chromosome: GL000206.1
+Scanning chromosome: GL000240.1
+Scanning chromosome: GL000236.1
+Scanning chromosome: GL000241.1
+Scanning chromosome: GL000243.1
+Scanning chromosome: GL000242.1
+Scanning chromosome: GL000230.1
+Scanning chromosome: GL000237.1
+Scanning chromosome: GL000233.1
+Scanning chromosome: GL000204.1
+Scanning chromosome: GL000198.1
+Scanning chromosome: GL000208.1
+Scanning chromosome: GL000191.1
+Scanning chromosome: GL000227.1
+Scanning chromosome: GL000228.1
+Scanning chromosome: GL000214.1
+Scanning chromosome: GL000221.1
+Scanning chromosome: GL000209.1
+Scanning chromosome: GL000218.1
+Scanning chromosome: GL000220.1
+Scanning chromosome: GL000213.1
+Scanning chromosome: GL000211.1
+Scanning chromosome: GL000199.1
+Scanning chromosome: GL000217.1
+Scanning chromosome: GL000216.1
+Scanning chromosome: GL000215.1
+Scanning chromosome: GL000205.1
+Scanning chromosome: GL000219.1
+Scanning chromosome: GL000224.1
+Scanning chromosome: GL000223.1
+Scanning chromosome: GL000195.1
+Scanning chromosome: GL000212.1
+Scanning chromosome: GL000222.1
+Scanning chromosome: GL000200.1
+Scanning chromosome: GL000193.1
+Scanning chromosome: GL000194.1
+Scanning chromosome: GL000225.1
+Scanning chromosome: GL000192.1
+No reads for chromosome 1, skipping it.
+Removing chromosome 1 from memory.
+No reads for chromosome 2, skipping it.
+Removing chromosome 2 from memory.
+No reads for chromosome 3, skipping it.
+Removing chromosome 3 from memory.
+No reads for chromosome 4, skipping it.
+Removing chromosome 4 from memory.
+No reads for chromosome 5, skipping it.
+Removing chromosome 5 from memory.
+No reads for chromosome 6, skipping it.
+Removing chromosome 6 from memory.
+No reads for chromosome 7, skipping it.
+Removing chromosome 7 from memory.
+No reads for chromosome 8, skipping it.
+Removing chromosome 8 from memory.
+No reads for chromosome 9, skipping it.
+Removing chromosome 9 from memory.
+No reads for chromosome 10, skipping it.
+Removing chromosome 10 from memory.
+No reads for chromosome 11, skipping it.
+Removing chromosome 11 from memory.
+No reads for chromosome 12, skipping it.
+Removing chromosome 12 from memory.
+No reads for chromosome 13, skipping it.
+Removing chromosome 13 from memory.
+No reads for chromosome 14, skipping it.
+Removing chromosome 14 from memory.
+No reads for chromosome 15, skipping it.
+Removing chromosome 15 from memory.
+No reads for chromosome 16, skipping it.
+Removing chromosome 16 from memory.
+No reads for chromosome 17, skipping it.
+Removing chromosome 17 from memory.
+No reads for chromosome 18, skipping it.
+Removing chromosome 18 from memory.
+No reads for chromosome 19, skipping it.
+Removing chromosome 19 from memory.
+No reads for chromosome 20, skipping it.
+Removing chromosome 20 from memory.
+No reads for chromosome 21, skipping it.
+Removing chromosome 21 from memory.
+No reads for chromosome 22, skipping it.
+Removing chromosome 22 from memory.
+No reads for chromosome X, skipping it.
+Removing chromosome X from memory.
+No reads for chromosome Y, skipping it.
+Removing chromosome Y from memory.
+No reads for chromosome MT, skipping it.
+Removing chromosome MT from memory.
+No reads for chromosome GL000207.1, skipping it.
+Removing chromosome GL000207.1 from memory.
+No reads for chromosome GL000226.1, skipping it.
+Removing chromosome GL000226.1 from memory.
+No reads for chromosome GL000229.1, skipping it.
+Removing chromosome GL000229.1 from memory.
+No reads for chromosome GL000231.1, skipping it.
+Removing chromosome GL000231.1 from memory.
+No reads for chromosome GL000210.1, skipping it.
+Removing chromosome GL000210.1 from memory.
+No reads for chromosome GL000239.1, skipping it.
+Removing chromosome GL000239.1 from memory.
+No reads for chromosome GL000235.1, skipping it.
+Removing chromosome GL000235.1 from memory.
+No reads for chromosome GL000201.1, skipping it.
+Removing chromosome GL000201.1 from memory.
+No reads for chromosome GL000247.1, skipping it.
+Removing chromosome GL000247.1 from memory.
+No reads for chromosome GL000245.1, skipping it.
+Removing chromosome GL000245.1 from memory.
+No reads for chromosome GL000197.1, skipping it.
+Removing chromosome GL000197.1 from memory.
+No reads for chromosome GL000203.1, skipping it.
+Removing chromosome GL000203.1 from memory.
+No reads for chromosome GL000246.1, skipping it.
+Removing chromosome GL000246.1 from memory.
+No reads for chromosome GL000249.1, skipping it.
+Removing chromosome GL000249.1 from memory.
+No reads for chromosome GL000196.1, skipping it.
+Removing chromosome GL000196.1 from memory.
+No reads for chromosome GL000248.1, skipping it.
+Removing chromosome GL000248.1 from memory.
+No reads for chromosome GL000244.1, skipping it.
+Removing chromosome GL000244.1 from memory.
+No reads for chromosome GL000238.1, skipping it.
+Removing chromosome GL000238.1 from memory.
+No reads for chromosome GL000202.1, skipping it.
+Removing chromosome GL000202.1 from memory.
+No reads for chromosome GL000234.1, skipping it.
+Removing chromosome GL000234.1 from memory.
+No reads for chromosome GL000232.1, skipping it.
+Removing chromosome GL000232.1 from memory.
+No reads for chromosome GL000206.1, skipping it.
+Removing chromosome GL000206.1 from memory.
+No reads for chromosome GL000240.1, skipping it.
+Removing chromosome GL000240.1 from memory.
+No reads for chromosome GL000236.1, skipping it.
+Removing chromosome GL000236.1 from memory.
+No reads for chromosome GL000241.1, skipping it.
+Removing chromosome GL000241.1 from memory.
+No reads for chromosome GL000243.1, skipping it.
+Removing chromosome GL000243.1 from memory.
+No reads for chromosome GL000242.1, skipping it.
+Removing chromosome GL000242.1 from memory.
+No reads for chromosome GL000230.1, skipping it.
+Removing chromosome GL000230.1 from memory.
+No reads for chromosome GL000237.1, skipping it.
+Removing chromosome GL000237.1 from memory.
+No reads for chromosome GL000233.1, skipping it.
+Removing chromosome GL000233.1 from memory.
+No reads for chromosome GL000204.1, skipping it.
+Removing chromosome GL000204.1 from memory.
+No reads for chromosome GL000198.1, skipping it.
+Removing chromosome GL000198.1 from memory.
+No reads for chromosome GL000208.1, skipping it.
+Removing chromosome GL000208.1 from memory.
+No reads for chromosome GL000191.1, skipping it.
+Removing chromosome GL000191.1 from memory.
+No reads for chromosome GL000227.1, skipping it.
+Removing chromosome GL000227.1 from memory.
+No reads for chromosome GL000228.1, skipping it.
+Removing chromosome GL000228.1 from memory.
+No reads for chromosome GL000214.1, skipping it.
+Removing chromosome GL000214.1 from memory.
+No reads for chromosome GL000221.1, skipping it.
+Removing chromosome GL000221.1 from memory.
+No reads for chromosome GL000209.1, skipping it.
+Removing chromosome GL000209.1 from memory.
+No reads for chromosome GL000218.1, skipping it.
+Removing chromosome GL000218.1 from memory.
+No reads for chromosome GL000220.1, skipping it.
+Removing chromosome GL000220.1 from memory.
+No reads for chromosome GL000213.1, skipping it.
+Removing chromosome GL000213.1 from memory.
+No reads for chromosome GL000211.1, skipping it.
+Removing chromosome GL000211.1 from memory.
+No reads for chromosome GL000199.1, skipping it.
+Removing chromosome GL000199.1 from memory.
+No reads for chromosome GL000217.1, skipping it.
+Removing chromosome GL000217.1 from memory.
+No reads for chromosome GL000216.1, skipping it.
+Removing chromosome GL000216.1 from memory.
+No reads for chromosome GL000215.1, skipping it.
+Removing chromosome GL000215.1 from memory.
+No reads for chromosome GL000205.1, skipping it.
+Removing chromosome GL000205.1 from memory.
+No reads for chromosome GL000219.1, skipping it.
+Removing chromosome GL000219.1 from memory.
+No reads for chromosome GL000224.1, skipping it.
+Removing chromosome GL000224.1 from memory.
+No reads for chromosome GL000223.1, skipping it.
+Removing chromosome GL000223.1 from memory.
+No reads for chromosome GL000195.1, skipping it.
+Removing chromosome GL000195.1 from memory.
+No reads for chromosome GL000212.1, skipping it.
+Removing chromosome GL000212.1 from memory.
+No reads for chromosome GL000222.1, skipping it.
+Removing chromosome GL000222.1 from memory.
+No reads for chromosome GL000200.1, skipping it.
+Removing chromosome GL000200.1 from memory.
+No reads for chromosome GL000193.1, skipping it.
+Removing chromosome GL000193.1 from memory.
+No reads for chromosome GL000194.1, skipping it.
+Removing chromosome GL000194.1 from memory.
+No reads for chromosome GL000225.1, skipping it.
+Removing chromosome GL000225.1 from memory.
+No reads for chromosome GL000192.1, skipping it.
+Removing chromosome GL000192.1 from memory.
+
+Note: for this conversion, the -G (GATK) compatibility option was not used; while this allows Pindel to indicate the uncertainty in genotypes, and should be compatible with most software, this format will not be compatible with GATK pipelines and tools such as GATK ValidateVariants; if you wish to input the vcf-file into the GATK pipeline, please use the -G option.
+
+Samples:
+1. test
+Chromosomes in which SVs have been found:
+1. 13
+Scanning chromosome: 1
+Scanning chromosome: 2
+Scanning chromosome: 3
+Scanning chromosome: 4
+Scanning chromosome: 5
+Scanning chromosome: 6
+Scanning chromosome: 7
+Scanning chromosome: 8
+Scanning chromosome: 9
+Scanning chromosome: 10
+Scanning chromosome: 11
+Scanning chromosome: 12
+Scanning chromosome: 13
+Scanning chromosome: 14
+Scanning chromosome: 15
+Scanning chromosome: 16
+Scanning chromosome: 17
+Scanning chromosome: 18
+Scanning chromosome: 19
+Scanning chromosome: 20
+Scanning chromosome: 21
+Scanning chromosome: 22
+Scanning chromosome: X
+Scanning chromosome: Y
+Scanning chromosome: MT
+Scanning chromosome: GL000207.1
+Scanning chromosome: GL000226.1
+Scanning chromosome: GL000229.1
+Scanning chromosome: GL000231.1
+Scanning chromosome: GL000210.1
+Scanning chromosome: GL000239.1
+Scanning chromosome: GL000235.1
+Scanning chromosome: GL000201.1
+Scanning chromosome: GL000247.1
+Scanning chromosome: GL000245.1
+Scanning chromosome: GL000197.1
+Scanning chromosome: GL000203.1
+Scanning chromosome: GL000246.1
+Scanning chromosome: GL000249.1
+Scanning chromosome: GL000196.1
+Scanning chromosome: GL000248.1
+Scanning chromosome: GL000244.1
+Scanning chromosome: GL000238.1
+Scanning chromosome: GL000202.1
+Scanning chromosome: GL000234.1
+Scanning chromosome: GL000232.1
+Scanning chromosome: GL000206.1
+Scanning chromosome: GL000240.1
+Scanning chromosome: GL000236.1
+Scanning chromosome: GL000241.1
+Scanning chromosome: GL000243.1
+Scanning chromosome: GL000242.1
+Scanning chromosome: GL000230.1
+Scanning chromosome: GL000237.1
+Scanning chromosome: GL000233.1
+Scanning chromosome: GL000204.1
+Scanning chromosome: GL000198.1
+Scanning chromosome: GL000208.1
+Scanning chromosome: GL000191.1
+Scanning chromosome: GL000227.1
+Scanning chromosome: GL000228.1
+Scanning chromosome: GL000214.1
+Scanning chromosome: GL000221.1
+Scanning chromosome: GL000209.1
+Scanning chromosome: GL000218.1
+Scanning chromosome: GL000220.1
+Scanning chromosome: GL000213.1
+Scanning chromosome: GL000211.1
+Scanning chromosome: GL000199.1
+Scanning chromosome: GL000217.1
+Scanning chromosome: GL000216.1
+Scanning chromosome: GL000215.1
+Scanning chromosome: GL000205.1
+Scanning chromosome: GL000219.1
+Scanning chromosome: GL000224.1
+Scanning chromosome: GL000223.1
+Scanning chromosome: GL000195.1
+Scanning chromosome: GL000212.1
+Scanning chromosome: GL000222.1
+Scanning chromosome: GL000200.1
+Scanning chromosome: GL000193.1
+Scanning chromosome: GL000194.1
+Scanning chromosome: GL000225.1
+Scanning chromosome: GL000192.1
+No reads for chromosome 1, skipping it.
+Removing chromosome 1 from memory.
+No reads for chromosome 2, skipping it.
+Removing chromosome 2 from memory.
+No reads for chromosome 3, skipping it.
+Removing chromosome 3 from memory.
+No reads for chromosome 4, skipping it.
+Removing chromosome 4 from memory.
+No reads for chromosome 5, skipping it.
+Removing chromosome 5 from memory.
+No reads for chromosome 6, skipping it.
+Removing chromosome 6 from memory.
+No reads for chromosome 7, skipping it.
+Removing chromosome 7 from memory.
+No reads for chromosome 8, skipping it.
+Removing chromosome 8 from memory.
+No reads for chromosome 9, skipping it.
+Removing chromosome 9 from memory.
+No reads for chromosome 10, skipping it.
+Removing chromosome 10 from memory.
+No reads for chromosome 11, skipping it.
+Removing chromosome 11 from memory.
+No reads for chromosome 12, skipping it.
+Removing chromosome 12 from memory.
+Processing chromosome 13
+reportSVsInChromosome: start reading region.
+Reading region 0-300000000
+Reading chromosome 13 into memory.
+Total reads: 1
+Sorting completed
+Removing chromosome 13 from memory.
+No reads for chromosome 14, skipping it.
+Removing chromosome 14 from memory.
+No reads for chromosome 15, skipping it.
+Removing chromosome 15 from memory.
+No reads for chromosome 16, skipping it.
+Removing chromosome 16 from memory.
+No reads for chromosome 17, skipping it.
+Removing chromosome 17 from memory.
+No reads for chromosome 18, skipping it.
+Removing chromosome 18 from memory.
+No reads for chromosome 19, skipping it.
+Removing chromosome 19 from memory.
+No reads for chromosome 20, skipping it.
+Removing chromosome 20 from memory.
+No reads for chromosome 21, skipping it.
+Removing chromosome 21 from memory.
+No reads for chromosome 22, skipping it.
+Removing chromosome 22 from memory.
+No reads for chromosome X, skipping it.
+Removing chromosome X from memory.
+No reads for chromosome Y, skipping it.
+Removing chromosome Y from memory.
+No reads for chromosome MT, skipping it.
+Removing chromosome MT from memory.
+No reads for chromosome GL000207.1, skipping it.
+Removing chromosome GL000207.1 from memory.
+No reads for chromosome GL000226.1, skipping it.
+Removing chromosome GL000226.1 from memory.
+No reads for chromosome GL000229.1, skipping it.
+Removing chromosome GL000229.1 from memory.
+No reads for chromosome GL000231.1, skipping it.
+Removing chromosome GL000231.1 from memory.
+No reads for chromosome GL000210.1, skipping it.
+Removing chromosome GL000210.1 from memory.
+No reads for chromosome GL000239.1, skipping it.
+Removing chromosome GL000239.1 from memory.
+No reads for chromosome GL000235.1, skipping it.
+Removing chromosome GL000235.1 from memory.
+No reads for chromosome GL000201.1, skipping it.
+Removing chromosome GL000201.1 from memory.
+No reads for chromosome GL000247.1, skipping it.
+Removing chromosome GL000247.1 from memory.
+No reads for chromosome GL000245.1, skipping it.
+Removing chromosome GL000245.1 from memory.
+No reads for chromosome GL000197.1, skipping it.
+Removing chromosome GL000197.1 from memory.
+No reads for chromosome GL000203.1, skipping it.
+Removing chromosome GL000203.1 from memory.
+No reads for chromosome GL000246.1, skipping it.
+Removing chromosome GL000246.1 from memory.
+No reads for chromosome GL000249.1, skipping it.
+Removing chromosome GL000249.1 from memory.
+No reads for chromosome GL000196.1, skipping it.
+Removing chromosome GL000196.1 from memory.
+No reads for chromosome GL000248.1, skipping it.
+Removing chromosome GL000248.1 from memory.
+No reads for chromosome GL000244.1, skipping it.
+Removing chromosome GL000244.1 from memory.
+No reads for chromosome GL000238.1, skipping it.
+Removing chromosome GL000238.1 from memory.
+No reads for chromosome GL000202.1, skipping it.
+Removing chromosome GL000202.1 from memory.
+No reads for chromosome GL000234.1, skipping it.
+Removing chromosome GL000234.1 from memory.
+No reads for chromosome GL000232.1, skipping it.
+Removing chromosome GL000232.1 from memory.
+No reads for chromosome GL000206.1, skipping it.
+Removing chromosome GL000206.1 from memory.
+No reads for chromosome GL000240.1, skipping it.
+Removing chromosome GL000240.1 from memory.
+No reads for chromosome GL000236.1, skipping it.
+Removing chromosome GL000236.1 from memory.
+No reads for chromosome GL000241.1, skipping it.
+Removing chromosome GL000241.1 from memory.
+No reads for chromosome GL000243.1, skipping it.
+Removing chromosome GL000243.1 from memory.
+No reads for chromosome GL000242.1, skipping it.
+Removing chromosome GL000242.1 from memory.
+No reads for chromosome GL000230.1, skipping it.
+Removing chromosome GL000230.1 from memory.
+No reads for chromosome GL000237.1, skipping it.
+Removing chromosome GL000237.1 from memory.
+No reads for chromosome GL000233.1, skipping it.
+Removing chromosome GL000233.1 from memory.
+No reads for chromosome GL000204.1, skipping it.
+Removing chromosome GL000204.1 from memory.
+No reads for chromosome GL000198.1, skipping it.
+Removing chromosome GL000198.1 from memory.
+No reads for chromosome GL000208.1, skipping it.
+Removing chromosome GL000208.1 from memory.
+No reads for chromosome GL000191.1, skipping it.
+Removing chromosome GL000191.1 from memory.
+No reads for chromosome GL000227.1, skipping it.
+Removing chromosome GL000227.1 from memory.
+No reads for chromosome GL000228.1, skipping it.
+Removing chromosome GL000228.1 from memory.
+No reads for chromosome GL000214.1, skipping it.
+Removing chromosome GL000214.1 from memory.
+No reads for chromosome GL000221.1, skipping it.
+Removing chromosome GL000221.1 from memory.
+No reads for chromosome GL000209.1, skipping it.
+Removing chromosome GL000209.1 from memory.
+No reads for chromosome GL000218.1, skipping it.
+Removing chromosome GL000218.1 from memory.
+No reads for chromosome GL000220.1, skipping it.
+Removing chromosome GL000220.1 from memory.
+No reads for chromosome GL000213.1, skipping it.
+Removing chromosome GL000213.1 from memory.
+No reads for chromosome GL000211.1, skipping it.
+Removing chromosome GL000211.1 from memory.
+No reads for chromosome GL000199.1, skipping it.
+Removing chromosome GL000199.1 from memory.
+No reads for chromosome GL000217.1, skipping it.
+Removing chromosome GL000217.1 from memory.
+No reads for chromosome GL000216.1, skipping it.
+Removing chromosome GL000216.1 from memory.
+No reads for chromosome GL000215.1, skipping it.
+Removing chromosome GL000215.1 from memory.
+No reads for chromosome GL000205.1, skipping it.
+Removing chromosome GL000205.1 from memory.
+No reads for chromosome GL000219.1, skipping it.
+Removing chromosome GL000219.1 from memory.
+No reads for chromosome GL000224.1, skipping it.
+Removing chromosome GL000224.1 from memory.
+No reads for chromosome GL000223.1, skipping it.
+Removing chromosome GL000223.1 from memory.
+No reads for chromosome GL000195.1, skipping it.
+Removing chromosome GL000195.1 from memory.
+No reads for chromosome GL000212.1, skipping it.
+Removing chromosome GL000212.1 from memory.
+No reads for chromosome GL000222.1, skipping it.
+Removing chromosome GL000222.1 from memory.
+No reads for chromosome GL000200.1, skipping it.
+Removing chromosome GL000200.1 from memory.
+No reads for chromosome GL000193.1, skipping it.
+Removing chromosome GL000193.1 from memory.
+No reads for chromosome GL000194.1, skipping it.
+Removing chromosome GL000194.1 from memory.
+No reads for chromosome GL000225.1, skipping it.
+Removing chromosome GL000225.1 from memory.
+No reads for chromosome GL000192.1, skipping it.
+Removing chromosome GL000192.1 from memory.
+
+Note: for this conversion, the -G (GATK) compatibility option was not used; while this allows Pindel to indicate the uncertainty in genotypes, and should be compatible with most software, this format will not be compatible with GATK pipelines and tools such as GATK ValidateVariants; if you wish to input the vcf-file into the GATK pipeline, please use the -G option.
+
