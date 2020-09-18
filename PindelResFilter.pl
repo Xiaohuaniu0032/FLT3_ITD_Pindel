@@ -3,11 +3,12 @@ use warnings;
 use File::Basename;
 use Getopt::Long;
 
-my ($si_vcf,$td_vcf,$name,$outdir);
+my ($si_vcf,$td_vcf,$query_seq,$name,$outdir);
 
 GetOptions(
     "si:s" => \$si_vcf,         # Need
     "td:s" => \$td_vcf,         # Need
+    "qseq:s" => \$query_seq,    # Need
     "n:s" => \$name,            # Need
     "od:s" => \$outdir,         # Need
     ) or die "unknown args\n";
@@ -18,13 +19,19 @@ GetOptions(
 
 # for _SI file:
 # 1. HOMLEN > 0;
-# 2. alt seq is included by HOMSEQ (not used)
-# 3. hom seq len >= alt seq len
-# 4. alt num >= 2
-# 5. SVLEN >= 2
+# 2. POS column need to be included by the positions of alt seq 
+# 3. alt num >= 2
+# 4. SVLEN >= 2
 
 # for _TD file:
 # 1. no filter
+
+# seq's region is 13:28600000-28610000
+my $seq;
+open IN, "$query_seq" or die;
+$seq = <IN>;
+close IN;
+chomp $seq;
 
 
 my $outfile_vcf = "$outdir/$name\.td.final.vcf";
@@ -58,9 +65,22 @@ while (<INS>){
                     if (/SVLEN=1/){
                         next;
                     }
-                    
-                    if ($hom_len >= $alt_len){
+
+                    # get all pos of this alt seq
+                    my $alt_pos_aref = &find_pos($seq,$alt_seq_raw);
+                    my $pos_n = scalar @{$alt_pos_aref};
+                    next if ($pos_n == 0); # this alt seq can not find any pos is seq
+
+                    my %alt_pos;
+                    for my $p (@{$alt_pos_aref}){
+
+                        $alt_pos{$p} = 1;
+                    }
+
+                    if (exists $alt_pos{$arr[1]}){
                         print O "$_\n";
+                    }else{
+                        next;
                     }
                 }
             }
@@ -82,3 +102,23 @@ close DUP;
 
 close O;
 
+
+sub find_pos{
+    my ($full_seq,$alt_seq) = @_;
+    # start pos of full seq is 28600000 (1-based)
+    my @pos; # 1-based
+    my $full_len = length($full_seq);
+    my $alt_len = length($alt_seq);
+    my $right_pos_limit = $full_len - $alt_len; # 0-based
+    
+
+    for (my $i=0;$i<=$right_pos_limit;$i++){
+        my $sub_seq = substr($full_seq,$i,$alt_len);
+        if ($sub_seq eq $alt_seq){
+            my $abs_pos = 28600000 + $i;
+            push @pos, $abs_pos;
+        }
+    }
+
+    return(\@pos);
+}

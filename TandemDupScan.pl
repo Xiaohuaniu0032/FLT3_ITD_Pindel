@@ -5,7 +5,7 @@ use FindBin qw/$Bin/;
 use Getopt::Long;
 use Cwd 'abs_path';
 
-my ($bam,$name,$frag_len,$fa,$pindel_bin,$outdir);
+my ($bam,$name,$frag_len,$fa,$pindel_bin,$samtools_bin,$outdir);
 
 GetOptions(
     "bam:s" => \$bam,                 # Need
@@ -13,6 +13,7 @@ GetOptions(
     "flen:i" => \$frag_len,           # Optional (default: 500)
     "fa:s" => \$fa,                   # Optional (default: /data1/database/b37/human_g1k_v37.fasta)
     "pindel:s" => \$pindel_bin,       # Optional (default: /home/fulongfei/miniconda3/bin/pindel)
+    "samtools:s" => \$samtools_bin,   # Optional (default: /home/fulongfei/miniconda3/bin/samtools)
     "od:s" => \$outdir,               # Need
     ) or die "unknown args\n";
 
@@ -35,6 +36,10 @@ if (not defined $fa){
 
 if (not defined $pindel_bin){
     $pindel_bin = "/home/fulongfei/miniconda3/bin/pindel";
+}
+
+if (not defined $samtools_bin){
+    $samtools_bin = "/home/fulongfei/miniconda3/bin/samtools";
 }
 
 if (!-d $outdir){
@@ -62,6 +67,29 @@ if ($chr_naming eq "no_chr_prefix"){
     $region = "chr13:28600000-28610000";
 }
 
+# make a seq file (used to filter the Pindel result)
+my $seq = "$outdir/$region\.seq.tmp";
+my $cmd = "$samtools_bin faidx $fa $region >$seq";
+system($cmd) == 0 or die "samtools faidx failed\n";
+
+# cat seq into one line
+my $seq_new = "$outdir/$region\.flt3.seq";
+my $origin_seq = "";
+open IN, "$seq" or die;
+<IN>;
+while (<IN>){
+    chomp;
+    $origin_seq = $origin_seq.uc($_);
+}
+close IN;
+
+open O, ">$seq_new" or die;
+print O "$origin_seq\n";
+close O;
+
+`rm $seq`;
+
+
 
 # make pindel cfg file
 my $abs_bam = abs_path($bam);
@@ -83,7 +111,9 @@ print O "$pindel2vcf -p $td -r $fa -R $fa_name -d 2009 -v $outdir/$name\.td.vcf\
 
 
 # filter result
-print O "perl $Bin/PindelResFilter.pl -si $outdir/$name\.ins.vcf -td $outdir/$name\.td.vcf -n $name -od $outdir\n";
+my @seq_file = glob "$outdir/*.flt3.seq";
+my $seq_file = $seq_file[0];
+print O "perl $Bin/PindelResFilter.pl -si $outdir/$name\.ins.vcf -td $outdir/$name\.td.vcf -qseq $seq_file -n $name -od $outdir\n";
 close O;
 
 
