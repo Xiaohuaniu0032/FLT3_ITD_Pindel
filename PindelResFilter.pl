@@ -103,6 +103,7 @@ close DUP;
 close O;
 
 
+
 sub find_pos{
     my ($full_seq,$alt_seq) = @_;
     # start pos of full seq is 28600000 (1-based)
@@ -114,11 +115,30 @@ sub find_pos{
 
     for (my $i=0;$i<=$right_pos_limit;$i++){
         my $sub_seq = substr($full_seq,$i,$alt_len);
-        if ($sub_seq eq $alt_seq){
+        my $is_n = &mismatch_num(uc($sub_seq),uc($alt_seq));
+        if ($mis_n <= 1){ # allow 1 mismatch between ref and alt seq
             my $abs_pos = 28600000 + $i;
             push @pos, $abs_pos;
         }
     }
 
     return(\@pos);
+}
+
+
+sub mismatch_num{
+    my ($seq1,$seq2) = @_;
+    my $len_seq = length($seq1);
+    my @seq1 = split //, $seq1;
+    my @seq2 = split //, $seq2;
+    my $mis_n = 0;
+    for (my $i=0;$i<=$#seq1;$i++){
+        my $a = $seq1[$i];
+        my $b = $seq2[$i];
+        if ($a ne $b){
+            $mis_n += 1;
+        }
+    }
+
+    return($mis_n);
 }
