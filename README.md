@@ -61,9 +61,19 @@ detect FLT3-internal tandem duplication using Pindel
 
 ### for _SI file
 1. HOMLEN > 0
-2. POS column need to be included by the positions of alt seq
+2. ref POS column need to be included by the positions of alt seq
 3. alt num >= 2
 4. SVLEN >= 2
+
+>*step2 details*
+
+ #1. get **ins seq** from ALT column in `*.ins.vcf`
+ 
+ #2. find all positions of **ins seq** in ref (allow one mismatch)
+ 
+ #3. check if POS column in `*.ins.vcf` is included by the finded postions in #2
+ 
+ #4. if the POS column is included, then this variant will output in the final result file `*.td.final.vcf`
 
 ### for _TD file
 1. no filter
